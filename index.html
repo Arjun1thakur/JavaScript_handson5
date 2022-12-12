@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Javascript Handson-5  <span>(Strings)</span></h1>
+            <h2>Q1. (Count Characters)</h2>
+            <h2><pre>Ans. Input:- AbaDd     || Output :- 11
+
+            const countCharacters = (S) => {
+                let R=[]
+                let A=0;
+                let D=0;
+                  for(let i=0;i< S.length;i++){
+                    if(S[i]=='A'){
+                      A=A+1;
+                    }if(S[i]=='D'){
+                      D=D+1;
+                    }
+                  }
+                R.push(A);
+                R.push(D);
+                return R;  
+              };
+            </pre></h2>
+            <h2>Q3. (Count the Vowels)</h2>
+            <h2><pre>Ans. Input :- Prepbytes     ||  Output :- 2
+               
+                var Count_Vowels= (S) => {
+                    sum=0;
+                    let vowel=['a','e','i','o','u','A','E','I','O','U'];
+                    for(let i=0;i<=S.length;i++){
+                      for(let j=0;j< vowel.length;j++){
+                        if(S[i]==vowel[j]){
+                          sum+=1;
+                      }
+                      }
+                    }
+                      return sum;
+                  };
+            </pre></h2>
+            <h2>Q4. (Concatenate the Strings)
+            </h2>
+            <h2><pre>Ans. Input :- Prep
+                bytes  ||  Output :- Prepbytes
+            
+                var Concatenate_Strings = (S1, S2) => {
+                    let S3=S1.concat(S2);
+                    return S3;
+                  };
+            </pre></h2>
+            <h2>Q5. (Find Length)</h2>
+            <h2><pre>Ans. Input :- CeDqe||  Output :- 5
+            
+                const findLength = (S) => {
+                    count=0;
+                    for(let i=0;i< S.length;i++){
+                      if(true){
+                        count++;
+                      }
+                    }
+                    return count;
+                  };
+            </pre>
+            <h2>Q6. (Find the Winner)
+            </h2>
+            <h2><pre>Ans. Input :- ADDAAADDDDD ||  Output :- Danish
+
+                var Game_Winner = (S) => {
+                    let A=0;
+                    let D=0;
+                    for(let i=0;i< S.length;i++){
+                      if(S[i]=='A'){
+                        A++;
+                      }else{
+                        D++
+                      }
+                    }
+                    if(A>D){
+                      return 'Aditya'
+                    }else if(D>A){
+                      return 'Danish'
+                    }else{
+                      return 'Draw'
+                    }
+                  }             
+            </pre></h2>
+            <h2>Q7. (Join Strings) </h2>
+            <h2>
+            </h2>
+            <h2><pre>Ans. Input :- PrepBytes Technologies  ||  Output :-   PrepBytesTechnologies
+
+                const joinStrings = (S, P) => {
+                    return S+P;
+                  };
+            </pre></h2>
+            <h2>Q8. (Plaindrome Check)</h2>
+            <h2><pre>Ans. Input :- Naman    ||  Output :- False 
+                
+                var Palin_Check = (str) =>{
+                    let value=''
+                       for(let i=str.length-1;i>=0;i--){
+                         value+=str[i]
+                       }
+                       let check='';
+                       for(let i=0;i< str.length;i++){
+                         if(value[i]===str[i]){
+                           check+=1;
+                         }
+                       }
+                       if(value.length==check.length){
+                         return 'True';
+                       }else{
+                         return 'False';
+                       }
+                  }
+            </pre></h2>
+            <h2>Q9. (Reverse the String) </h2>
+            <h2><pre>Ans. Input :- I am utkarsh raj||  Output :- jar hsraktu ma I
+                
+                var Reverse_String = (str) => {
+                    Str=''
+                    for(let i=str.length-1;i>=0;i--){
+                      Str+=str[i];
+                    }   
+                    return Str;
+                  };
+            </pre></h2>
+            <h2>Q10. (Match the Strings)</h2>
+            <h2><pre>Ans. Input :- Prepbytes
+                Prepbytes     ||      Output:-  YES
+
+                var String_Match = (S1,S2) => {
+                    sum=0;
+                    s1=S1.split(" ").join("")
+                    s2=S2.split(" ").join("")
+                    for(let i=0;i< s1.length;i++){
+                      if(s1[i]==s2[i]){
+                        sum++;
+                      }
+                    }
+                    if(sum>=0 && s1.length==s2.length){
+                      return 'YES';
+                    }else{
+                      return 'NO';
+                    }
+                  };
+            </pre></h2>
+            <h2>Q11. (String Replace)</h2>
+            <h2><pre>Ans. Input :- Hi, I am You.
+                You
+                Prepbytes   ||      Output:-  Hi, I am Prepbytes.
+
+                var Replace = (S, pattern , text) => {
+                    let s=S.replace(pattern,text)
+                    return s;
+                  };
+            </pre></h2>
+            <h2>Q13. (Count the Vowels and Consonants)</h2>
+            <h2><pre>Ans. Input :- Prepbytes     ||      Output:-  2    7
+
+                var Count_Vowels= (S) => {
+                    sum=0;
+                    let vowel='aeiouAEIOU';
+                    let j=vowel.split('')
+                    for(let i=0;i< S.length;i++){
+                        if(j.includes(S[i])){
+                          sum+=1;
+                      }
+                    }
+                    return sum; 
+                  };
+                  
+                  var Count_Consonants= (S) => 
+                  {
+                    sum1=0;
+                    let vowel='aeiouAEIOU';
+                    let j=vowel.split('')
+                    for(let i=0;i< S.length;i++){
+                        if(!j.includes(S[i])){
+                          sum1+=1;
+                      }
+                    }
+                    return sum1;      
+                  };
+            </pre></h2>
+        </div>
+</body>
+</html>
